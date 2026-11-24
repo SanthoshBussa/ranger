@@ -1,0 +1,13 @@
+
+# Eclipse settings
+settings/
+
+# Compiled Java files
+bin/
+
+# Eclipse project configuration
+.classpath
+.project
+
+# Optional: Eclipse metadata
+.metadata/
