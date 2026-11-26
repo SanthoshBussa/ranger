@@ -11,7 +11,7 @@ public class MyStack<T> {
 	}
 
 	public MyStack(int initialCapacity) {
-		if (initialCapacity < 0) throw new IllegalArgumentException("Initial capacity can not be negative");
+		if (initialCapacity < 1) throw new IllegalArgumentException("Initial capacity can not be "+initialCapacity);
 		stack = (T[]) new Object[initialCapacity];
 	}
 
@@ -32,6 +32,7 @@ public class MyStack<T> {
 	}
 
 	public T peek() {
+		if (size == 0) throw new EmptyStackException();
 		return stack[size - 1];
 	}
 
