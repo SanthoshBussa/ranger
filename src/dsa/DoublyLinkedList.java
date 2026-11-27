@@ -32,6 +32,41 @@ public class DoublyLinkedList<T> {
 		}
 		size++;
 	}
+	public void addFirst(T ele) {
+		Node newNode = new Node(ele);
+		if(head == null) add(ele);
+		else{
+			newNode.next = head;
+			this.head.prev = newNode;
+			head = newNode;
+		}
+		size++;
+	}
+	
+	public void addLast(T ele) {
+		add(ele);
+	}
+	
+	public void addAll(DoublyLinkedList<T> dl) {
+		if(head == null) {
+			head = dl.head;
+			tail = dl.tail;
+		}
+		else {
+			this.tail.next = dl.head;
+			dl.head.prev = this.tail;
+			tail = dl.tail;
+		}
+		this.size+=dl.size;
+	}
+	public void removeFirst() {
+		if(head == null) throw new IllegalArgumentException("List is Empty");
+		head = head.next;
+		head.prev = null;
+	}
+	public int size() {
+		return this.size;
+	}
 	
 	public String toString() {
 		StringJoiner sj = new StringJoiner("," , "[" , "]");

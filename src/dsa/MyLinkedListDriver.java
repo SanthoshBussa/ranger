@@ -6,13 +6,14 @@ public class MyLinkedListDriver {
 		l1.add(21);
 		l1.add(22);
 		l1.add(23);
-		l1.add(24);
-		l1.add(25);
+		l1.add(34);
+		l1.add(35);
+		l1.add(36);
 		
+		
+		l1.removeFirst();
 		
 		System.out.println(l1);
-		l1.printReverse();
-		
 		
 	}
 }
